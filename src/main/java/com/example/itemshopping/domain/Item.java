@@ -49,6 +49,6 @@ public class Item {
 
     public String toString(){
         return "El producto " + name + " tiene un precio de " + value +
-                " y el precio con una cantidad de " + quantity + " es de " + price;
+                " y el precio con una cantidad de " + quantity + " es de " + Math.toIntExact((long) price);
     }
 }
