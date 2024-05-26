@@ -1,4 +1,4 @@
-package com.example.itemshopping;
+package com.example.itemshopping.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

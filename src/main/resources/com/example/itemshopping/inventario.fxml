@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemshopping.controller.Inventario">
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1262.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemshopping.controller.Inventario">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ebebeb;" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutY="3.0" prefHeight="182.0" prefWidth="986.0">
+            <Pane layoutX="138.0" layoutY="14.0" prefHeight="182.0" prefWidth="986.0">
                <children>
                   <Label layoutX="382.0" layoutY="76.0" text="Inventario">
                      <font>
@@ -32,7 +32,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="173.0" prefHeight="495.0" prefWidth="986.0">
+            <Pane layoutX="138.0" layoutY="152.0" prefHeight="495.0" prefWidth="986.0">
                <children>
                   <Button layoutX="381.0" layoutY="378.0" mnemonicParsing="false" onAction="#paginaPrincipal" text="Página principal">
                      <font>
@@ -44,7 +44,7 @@
                         <Font name="Century Gothic" size="25.0" />
                      </font>
                   </Label>
-                  <TextArea fx:id="textAreaInventario" layoutX="126.0" layoutY="-10.0" prefHeight="356.0" prefWidth="742.0" />
+                  <TextArea fx:id="textAreaInventario" layoutX="126.0" layoutY="6.0" prefHeight="356.0" prefWidth="742.0" />
                </children>
             </Pane>
          </children>

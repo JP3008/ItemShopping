@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1159.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemshopping.controller.PaginaPrincipal">
    <center>
-      <AnchorPane prefHeight="652.0" prefWidth="1173.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="652.0" prefWidth="1173.0" style="-fx-background-color: #ebebeb;" BorderPane.alignment="CENTER">
          <children>
             <Pane layoutY="145.0" prefHeight="544.0" prefWidth="1159.0">
                <children>
@@ -14,32 +16,67 @@
                      <font>
                         <Font name="Century Gothic" size="25.0" />
                      </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color green="0.20392157137393951" blue="0.10196078568696976" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
                   </Button>
                   <Button layoutX="521.0" layoutY="274.0" mnemonicParsing="false" onAction="#ventas" text="Ventas">
                      <font>
                         <Font name="Century Gothic" size="25.0" />
                      </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color green="0.20392157137393951" blue="0.10196078568696976" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
                   </Button>
                   <Button layoutX="466.0" layoutY="206.0" mnemonicParsing="false" onAction="#buscarArticulos" text=" Buscar artículos">
                      <font>
                         <Font name="Century Gothic" size="25.0" />
                      </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color green="0.20392157137393951" blue="0.10196078568696976" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
                   </Button>
                   <Button layoutX="502.0" layoutY="346.0" mnemonicParsing="false" onAction="#inventario" text="Inventario">
                      <font>
                         <Font name="Century Gothic" size="25.0" />
                      </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color green="0.20392157137393951" blue="0.10196078568696976" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
                   </Button>
                   <Button layoutX="464.0" layoutY="139.0" mnemonicParsing="false" onAction="#agregarArticulo" text="Agregar artículos">
                      <font>
                         <Font name="Century Gothic" size="25.0" />
                      </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color green="0.20392157137393951" blue="0.10196078568696976" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
                   </Button>
                </children>
             </Pane>
             <Pane layoutX="-1.0" layoutY="1.0" prefHeight="201.0" prefWidth="1159.0">
                <children>
-                  <Label layoutX="392.0" layoutY="101.0" text="MaxiCompras">
+                  <Label layoutX="392.0" layoutY="101.0" text="MaxiCompras" textFill="#050505">
                      <font>
                         <Font name="Cooper Black" size="54.0" />
                      </font>

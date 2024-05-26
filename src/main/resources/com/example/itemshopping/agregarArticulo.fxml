@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemshopping.controller.AgregarArticulos">
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemshopping.controller.AgregarArticulos">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="713.0" prefWidth="1184.0" style="-fx-background-color: #ebebeb;" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutY="3.0" prefHeight="182.0" prefWidth="986.0">
+            <Pane layoutX="99.0" layoutY="14.0" prefHeight="182.0" prefWidth="986.0">
                <children>
                   <Label layoutX="366.0" layoutY="76.0" text="Agregar artículo">
                      <font>
@@ -32,7 +32,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutY="173.0" prefHeight="495.0" prefWidth="986.0">
+            <Pane layoutX="99.0" layoutY="173.0" prefHeight="495.0" prefWidth="986.0">
                <children>
                   <Label layoutX="164.0" layoutY="82.0" text="Producto:">
                      <font>
