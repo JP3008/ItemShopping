@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1159.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemshopping.controller.PaginaPrincipal">
+   <center>
+      <AnchorPane prefHeight="652.0" prefWidth="1173.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutY="145.0" prefHeight="544.0" prefWidth="1159.0">
+               <children>
+                  <Button layoutX="539.0" layoutY="414.0" mnemonicParsing="false" onAction="#exit" text="Salir">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="521.0" layoutY="274.0" mnemonicParsing="false" onAction="#ventas" text="Ventas">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="466.0" layoutY="206.0" mnemonicParsing="false" onAction="#buscarArticulos" text=" Buscar artículos">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="502.0" layoutY="346.0" mnemonicParsing="false" onAction="#inventario" text="Inventario">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="464.0" layoutY="139.0" mnemonicParsing="false" onAction="#agregarArticulo" text="Agregar artículos">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="-1.0" layoutY="1.0" prefHeight="201.0" prefWidth="1159.0">
+               <children>
+                  <Label layoutX="392.0" layoutY="101.0" text="MaxiCompras">
+                     <font>
+                        <Font name="Cooper Black" size="54.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="489.0" layoutY="171.0" text="Donde tu ahorro es máximo!!">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font></Label>
+               </children></Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
