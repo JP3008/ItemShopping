@@ -3,15 +3,23 @@ package com.example.itemshopping.controller;
 import com.example.itemshopping.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 
-public class PaginaPrincipal
+public class Ventas
 {
+
+    @javafx.fxml.FXML
+    private TextField textFieldProducto;
+    @javafx.fxml.FXML
+    private TextField textFieldCantidad;
     @javafx.fxml.FXML
     private BorderPane bp;
+    @javafx.fxml.FXML
+    private TextArea textFieldVentas;
 
     private void loadPage(String page){
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(page));
@@ -26,24 +34,18 @@ public class PaginaPrincipal
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void exit(ActionEvent actionEvent) {
-        System.exit(0);
+    @Deprecated
+    public void agregarArticulo(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void agregarArticulo(ActionEvent actionEvent) {loadPage("agregarArticulo.fxml");
+    public void paginaPrincipal(ActionEvent actionEvent) {loadPage("paginaPrincipal.fxml");}
+
+    @javafx.fxml.FXML
+    public void pagar(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void buscarArticulos(ActionEvent actionEvent) {loadPage("buscarArticulos.fxml");
-    }
-
-    @javafx.fxml.FXML
-    public void ventas(ActionEvent actionEvent) {loadPage("ventas.fxml");
-    }
-
-    @javafx.fxml.FXML
-    public void inventario(ActionEvent actionEvent) {loadPage("inventario.fxml");
+    public void agregarArticuloLista(ActionEvent actionEvent) {
     }
 }

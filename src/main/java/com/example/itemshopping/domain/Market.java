@@ -13,7 +13,7 @@ public class Market {
     }
     //Metodo que agrega un Item
     public boolean addItems(Item newItem){
-        int valueASCII = org.example.util.Utility.convertASCII(newItem.getName());
+        int valueASCII = com.example.itemshopping.util.Utility.convertASCII(newItem.getName());
         //Verificar que el item no existe para no volverlo a ingresarlo y que el valor del ASCII sea más pequeño que el tamaño de la hash table
         if (valueASCII < this.n) {
             Node productNode = new Node(newItem);
@@ -36,7 +36,7 @@ public class Market {
     }
     //Metodo que elimina un Item
     public boolean deleteItems(Item deleteItem) {
-        int valueASCII = org.example.util.Utility.convertASCII(deleteItem.getName());
+        int valueASCII = com.example.itemshopping.util.Utility.convertASCII(deleteItem.getName());
         //Si la posicion obtenida no tiene elemento y esta nula no elimina nada
         if (items[valueASCII] == null) {
             return false;

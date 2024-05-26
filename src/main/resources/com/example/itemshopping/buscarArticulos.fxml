@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemshopping.controller.BuscarArticulo">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutY="3.0" prefHeight="182.0" prefWidth="986.0">
+               <children>
+                  <Label layoutX="382.0" layoutY="76.0" text="Buscar artículo">
+                     <font>
+                        <Font name="Century Gothic" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="19.0" prefHeight="23.0" prefWidth="131.0" text="MaxiCompras">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="42.0" prefHeight="22.0" prefWidth="164.0" text="Donde tu ahorro es máximo!!">
+                     <font>
+                        <Font name="Berlin Sans FB" size="10.0" />
+                     </font></Label>
+                  <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="149.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@carrito-de-compras.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutY="173.0" prefHeight="495.0" prefWidth="986.0">
+               <children>
+                  <Label layoutX="164.0" layoutY="24.0" text="Producto:">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="497.0" layoutY="361.0" mnemonicParsing="false" onAction="#modificarArticulo" text="Modificar">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="230.0" layoutY="361.0" mnemonicParsing="false" onAction="#paginaPrincipal" text="Página principal">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textFieldProducto" layoutX="294.0" layoutY="17.0" prefHeight="47.0" prefWidth="435.0" />
+                  <Label fx:id="labelID" layoutX="374.0" layoutY="40.0">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaProductoEncontrado" layoutX="146.0" layoutY="89.0" prefHeight="241.0" prefWidth="742.0" />
+                  <Button layoutX="744.0" layoutY="17.0" mnemonicParsing="false" onAction="#buscarProducto" text="Buscar">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="681.0" layoutY="361.0" mnemonicParsing="false" onAction="#eliminarArticulo" text="Eliminar">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,6 +1,7 @@
 module com.example.itemshopping {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.xml;
 
 
     opens com.example.itemshopping to javafx.fxml;
