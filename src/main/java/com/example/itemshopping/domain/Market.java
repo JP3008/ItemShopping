@@ -90,64 +90,62 @@ public class Market {
         }
         return null;
     }
-    public Item shopping(Item itemBuy){
+    public Item shopping(Item itemBuy) {
         int valueASCII = com.example.itemshopping.util.Utility.convertASCII(itemBuy.getName());
-        //Si en la posicion hay nodos hace la posible compra sino retorna nulo
-        if (items[valueASCII] != null && searchItem(itemBuy.getName())!=null) {//Meter validacion con el search tambien
+        // Si en la posicion hay nodos hace la posible compra sino retorna nulo
+        if (items[valueASCII] != null && searchItem(itemBuy.getName()) != null) {
             Item tempFirst = (Item) items[valueASCII].data;
-            //Validación poder si el elemento no esta en la posicion inicial
+            // Validación si el elemento no esta en la posicion inicial
             if (tempFirst.getName().trim().equalsIgnoreCase(itemBuy.getName().trim())) {
-                //Si no hay suficiente cantidad retorna nulo
+                // Si no hay suficiente cantidad retorna nulo
                 if (tempFirst.getQuantity() - itemBuy.getQuantity() < 0) {
-                    return new Item(itemBuy.getName(),0,tempFirst.getQuantity());
+                    return new Item("", 0, tempFirst.getQuantity());
                 } else {
-                    //Sino ajusta la cantidad de items que hay y lo introduce nuevamente en la lista
+                    // Sino ajusta la cantidad de items que hay y lo introduce nuevamente en la lista
                     tempFirst.setQuantity(tempFirst.getQuantity() - itemBuy.getQuantity());
-                    //Si se actualizaron la cantidad y esta queda en 0 se elimina el item de la lista
+                    // Si se actualizaron la cantidad y esta queda en 0 se elimina el item de la lista
                     if (tempFirst.getQuantity() == 0) {
                         items[valueASCII] = items[valueASCII].next;
-                    }else {
-                        //Sino sigue habiendo solo se actualiza la cantidad
+                    } else {
+                        // Sino sigue habiendo solo se actualiza la cantidad
                         items[valueASCII].data = tempFirst;
                     }
-                    //Se devuelve el item, pero con el valor que tiene segun el inventario
+                    // Se devuelve el item, pero con el valor que tiene segun el inventario
                     itemBuy = new Item(itemBuy.getName(), tempFirst.getValue(), itemBuy.getQuantity());
                     return itemBuy;
                 }
-            } else{
-                //Sino se hace un nodo auxiliar con la siguiente posicion al primero
+            } else {
+                // Sino se hace un nodo auxiliar con la siguiente posicion al primero
                 Node aux = items[valueASCII].next;
-                Item tempOther = (Item) aux.data;
-                //Se compara los nombre o hasta que llegue al final de la lista de nodos
-                while (!(tempOther.getName().trim().equalsIgnoreCase(itemBuy.getName().trim()))) {
-                    tempOther = (Item)aux.next.data;
-                    aux = aux.next;
-                }
-                //Si cuando se sale del while coinciden los nombres del temporal con el item a comprar
-                if (tempOther.getName().trim().equalsIgnoreCase(itemBuy.getName().trim())) {
-                    //Si no hay suficiente cantidad retorna nulo
-                    if (tempOther.getQuantity() - itemBuy.getQuantity() < 0) {
-                        return new Item(itemBuy.getName(),0,tempFirst.getQuantity());
-                    } else {
-                        //Sino ajusta la cantidad de items que hay y lo introduce nuevamente en la lista
-                        tempOther.setQuantity(tempOther.getQuantity() - itemBuy.getQuantity());
-                        if (tempOther.getQuantity() == 0) {
-                            aux.next = aux.next.next;
-                        }else {
-                            //Sino sigue habiendo solo se actualiza la cantidad
-                            aux.next.data = tempOther;
+                while (aux != null) {
+                    Item tempOther = (Item) aux.data;
+                    // Se compara los nombres o hasta que llegue al final de la lista de nodos
+                    if (tempOther.getName().trim().equalsIgnoreCase(itemBuy.getName().trim())) {
+                        // Si no hay suficiente cantidad retorna nulo
+                        if (tempOther.getQuantity() - itemBuy.getQuantity() < 0) {
+                            return new Item("", 0, tempOther.getQuantity());
+                        } else {
+                            // Sino ajusta la cantidad de items que hay y lo introduce nuevamente en la lista
+                            tempOther.setQuantity(tempOther.getQuantity() - itemBuy.getQuantity());
+                            if (tempOther.getQuantity() == 0) {
+                                aux.next = aux.next != null ? aux.next.next : null;
+                            } else {
+                                // Sino sigue habiendo solo se actualiza la cantidad
+                                aux.data = tempOther;
+                            }
+                            // Se devuelve el item, pero con el valor que tiene segun el inventario
+                            itemBuy = new Item(itemBuy.getName(), tempOther.getValue(), itemBuy.getQuantity());
+                            return itemBuy;
                         }
-
-                        //Se devuelve el item, pero con el valor que tiene segun el inventario
-                        itemBuy = new Item(itemBuy.getName(), tempOther.getValue(), itemBuy.getQuantity());
-                        return itemBuy;
                     }
+                    aux = aux.next;
                 }
             }
         }
-        //Si el item no se logro encontrar ya no que no hay se retorna nulo
+        // Si el item no se logro encontrar ya no que no hay se retorna nulo
         return null;
     }
+
 
     // Método que obtiene todos los Items
     public String getAllItems() {

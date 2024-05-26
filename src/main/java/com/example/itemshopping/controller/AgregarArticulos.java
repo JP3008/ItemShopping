@@ -22,6 +22,7 @@ public class AgregarArticulos
     @javafx.fxml.FXML
     private TextField textFieldCantidad;
     private Market market = com.example.itemshopping.controller.PaginaPrincipal.getMarket();
+    private Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
     private void loadPage(String page){
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(page));
@@ -47,10 +48,17 @@ public class AgregarArticulos
             float value = Integer.parseInt(textFieldValor.getText());
             int cantidad = Integer.parseInt(textFieldCantidad.getText());
             Item newItem = new Item(name,value,cantidad);
-            textFieldValor.setText("");
-            textFieldCantidad.setText("");
-            textFieldProducto.setText("");
-            market.addItems(newItem);
+            if (market.addItems(newItem)){
+                textFieldValor.setText("");
+                textFieldCantidad.setText("");
+                textFieldProducto.setText("");
+            }else{
+                alert.setContentText("El producto ya existe dentro del inventario");
+                alert.showAndWait();
+                textFieldValor.setText("");
+                textFieldCantidad.setText("");
+                textFieldProducto.setText("");
+            }
         }else{
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Falta información por ingresar");

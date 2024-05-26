@@ -61,6 +61,7 @@ public class Ventas
             }else{
                 alert.setContentText("Su vuelto es de: " + (pago-total) + "\nGracias por su compra");
                 alert.showAndWait();
+                textFieldProducto.setText("");
                 textFieldVentas.setText("");
                 textFieldTotal.setText("");
             }
@@ -73,26 +74,26 @@ public class Ventas
             String name = textFieldProducto.getText();
             int quantity = Integer.parseInt(textFieldCantidad.getText());
             Item itemTemp = new Item(name, quantity);
-            if (market.shopping(itemTemp) == null) {
+            Item result = market.shopping(itemTemp);
+
+            if (result == null) {
                 alert.setContentText("El producto no existe en el inventario");
                 alert.showAndWait();
                 textFieldProducto.setText("");
                 textFieldCantidad.setText("");
-            } else if (market.shopping(itemTemp).getValue() == 0) {
-                Item temp = market.shopping(itemTemp);
+            } else if (result.getValue() == 0 && result.getName().equals("")) {
                 alert.setContentText("La cantidad solicitada no es posible de adquirirla \n" +
-                        "del producto " + temp.getName() + "\nsolo queda " + temp.getQuantity());
+                        "del producto " + result.getName() + "\nsolo queda " + result.getQuantity());
                 alert.showAndWait();
                 textFieldCantidad.setText("");
             } else {
-                Item goalItem = market.shopping(itemTemp);
-                textFieldVentas.appendText(goalItem + " total " + goalItem.getPrice() + "\n");
-                total += goalItem.getPrice();
+                textFieldVentas.appendText(result + " total " + result.getPrice() + "\n");
+                total += result.getPrice();
                 textFieldTotal.setText(String.valueOf(total));
                 textFieldProducto.setText("");
                 textFieldCantidad.setText("");
             }
-        }else{
+        } else {
             alert.setContentText("Falta información por ingresar");
             alert.showAndWait();
         }
