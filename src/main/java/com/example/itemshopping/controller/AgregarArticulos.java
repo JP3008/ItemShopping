@@ -53,11 +53,11 @@ public class AgregarArticulos
             market.addItems(newItem);
         }else{
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("No sé ingreso un valor");
+            alert.setContentText("Falta información por ingresar");
             alert.showAndWait();
         }
     }
     private boolean isValid(){
-        return !textFieldProducto.getText().isEmpty() || textFieldCantidad.getText().isEmpty() || textFieldValor.getText().isEmpty();
+        return !(textFieldProducto.getText().isEmpty() || textFieldCantidad.getText().isEmpty() || textFieldValor.getText().isEmpty());
     }
 }

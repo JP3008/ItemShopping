@@ -30,7 +30,11 @@ public class Inventario
 
     @javafx.fxml.FXML
     public void initialize() {
-        textAreaInventario.setText(market.getAllItems());
+        if (market.getAllItems().equals("")){
+            textAreaInventario.setText("No hay inventario agregado");
+        }else {
+            textAreaInventario.setText(market.getAllItems());
+        }
     }
 
     @javafx.fxml.FXML
