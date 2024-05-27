@@ -14,6 +14,12 @@ public class Item {
         this.quantity = quantity;
         this.price = this.value * this.quantity;
     }
+    public Item(String name, int quantity){
+        this.name = name;
+        this.quantity = quantity;
+        this.price = this.value * this.quantity;
+    }
+
 
     public String getName() {
         return name;
@@ -49,6 +55,6 @@ public class Item {
 
     public String toString(){
         return "El producto " + name + " tiene un precio de " + value +
-                " y el precio con una cantidad de " + quantity + " es de " + price;
+                " y hay una cantidad de " + quantity;
     }
 }

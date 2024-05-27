@@ -1,6 +1,7 @@
 package com.example.itemshopping.controller;
 
 import com.example.itemshopping.HelloApplication;
+import com.example.itemshopping.domain.Market;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -12,6 +13,7 @@ public class PaginaPrincipal
 {
     @javafx.fxml.FXML
     private BorderPane bp;
+    public static   Market market = new Market(200);
 
     private void loadPage(String page){
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(page));
@@ -45,5 +47,8 @@ public class PaginaPrincipal
 
     @javafx.fxml.FXML
     public void inventario(ActionEvent actionEvent) {loadPage("inventario.fxml");
+    }
+    public static Market getMarket(){
+        return market;
     }
 }

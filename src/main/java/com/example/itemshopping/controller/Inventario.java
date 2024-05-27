@@ -1,6 +1,7 @@
 package com.example.itemshopping.controller;
 
 import com.example.itemshopping.HelloApplication;
+import com.example.itemshopping.domain.Market;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -16,6 +17,7 @@ public class Inventario
     private BorderPane bp;
     @javafx.fxml.FXML
     private TextArea textAreaInventario;
+    private Market market = com.example.itemshopping.controller.PaginaPrincipal.getMarket();
 
     private void loadPage(String page){
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(page));
@@ -28,6 +30,11 @@ public class Inventario
 
     @javafx.fxml.FXML
     public void initialize() {
+        if (market.getAllItems().equals("")){
+            textAreaInventario.setText("No hay inventario agregado");
+        }else {
+            textAreaInventario.setText(market.getAllItems());
+        }
     }
 
     @javafx.fxml.FXML
