@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemshopping.controller.ModificarArticulos">
+   <center>
+      <AnchorPane prefHeight="713.0" prefWidth="1184.0" style="-fx-background-color: #ebebeb;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="99.0" layoutY="14.0" prefHeight="182.0" prefWidth="986.0">
+               <children>
+                  <Label layoutX="366.0" layoutY="76.0" text="Modificar artículo">
+                     <font>
+                        <Font name="Century Gothic" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="19.0" prefHeight="23.0" prefWidth="131.0" text="MaxiCompras">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="42.0" prefHeight="22.0" prefWidth="164.0" text="Donde tu ahorro es máximo!!">
+                     <font>
+                        <Font name="Berlin Sans FB" size="10.0" />
+                     </font></Label>
+                  <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="149.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@carrito-de-compras.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="99.0" layoutY="173.0" prefHeight="495.0" prefWidth="986.0">
+               <children>
+                  <Label layoutX="164.0" layoutY="82.0" text="Producto:">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="587.0" layoutY="361.0" mnemonicParsing="false" onAction="#guardarCambios" text="Guardar cambios">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="230.0" layoutY="361.0" mnemonicParsing="false" onAction="#atrás" text="Atrás">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="161.0" layoutY="150.0" text="Cantidad:">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="161.0" layoutY="207.0" text="Valor por unidad:">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldProducto" layoutX="294.0" layoutY="75.0" prefHeight="47.0" prefWidth="563.0" />
+                  <TextField fx:id="textFieldValor" layoutX="383.0" layoutY="201.0" prefHeight="47.0" prefWidth="149.0" />
+                  <Label fx:id="labelID" layoutX="374.0" layoutY="40.0">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldCantidad" layoutX="294.0" layoutY="143.0" prefHeight="45.0" prefWidth="103.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
